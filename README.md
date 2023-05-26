@@ -1,4 +1,4 @@
-# Challenge API Financeira
+# Node.js: Criando API Rest com autenticação, perfis de usuários e permissões
 
 API desenvolvida com base no [Curso da Alura - Node.js: Criando API Rest com autenticação, perfis de usuários e permissões](https://www.alura.com.br/curso-online-node-js-api-rest-autenticacao-perfis-usuarios-permissoes)
 
