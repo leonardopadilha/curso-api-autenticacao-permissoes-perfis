@@ -12,8 +12,6 @@ API desenvolvida com base no [Curso da Alura - Node.js: Criando API Rest com aut
 [![JS](https://img.shields.io/badge/license-javascript-blue.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 ## Instalação
 
-Instale a API com NPM
-
 ```bash
   npm install
 ```
