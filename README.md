@@ -9,7 +9,11 @@ API desenvolvida com base no [Curso da Alura - Node.js: Criando API Rest com aut
 [![MYSQL](https://img.shields.io/badge/license-mysql-blue.svg)](https://www.mysql.com/)
 [![Postman](https://img.shields.io/badge/license-postman-orange.svg)](https://www.postman.com/)
 [![Express](https://img.shields.io/badge/license-express-green.svg)](https://expressjs.com/)
+[![Bcrypt](https://img.shields.io/badge/license-bcrypt-blue.svg)](https://www.npmjs.com/package/bcryptjs)
+[![UUID](https://img.shields.io/badge/license-uuid-dark--green.svg)](https://www.npmjs.com/package/uuid)
 [![JS](https://img.shields.io/badge/license-javascript-blue.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+
 ## Instalação
 
 ```bash
