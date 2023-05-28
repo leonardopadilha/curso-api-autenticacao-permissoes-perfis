@@ -30,6 +30,39 @@ class UsuarioService {
         }
         
     }
+
+    async buscar() {
+        const usuariosCadastrados = await database.usuarios.findAll();
+        return usuariosCadastrados;
+    }
+
+    async buscarPorId(id) {
+        const usuario = await database.usuarios.findOne({
+            where: {
+                id: id
+            }
+        })
+
+        if (!usuario) {
+            throw new Error('Usuário informado não cadastrado')
+        }
+
+        return usuario;
+    }
+
+    async editar(dto) {
+        const usuario = await this.buscarPorId(dto.id);
+
+        try {
+            usuario.nome = dto.nome
+            usuario.email = dto.email
+
+            await usuario.save();
+            return usuario;
+        } catch (error) {
+            throw new Error('Erro ao editar usuário')
+        }
+    }
 }
 
 module.exports = UsuarioService

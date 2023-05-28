@@ -20,6 +20,12 @@ API desenvolvida com base no [Curso da Alura - Node.js: Criando API Rest com aut
   npm install
 ```
 
+## Criação das tabelas
+
+```bash
+  sequelize db:migrate
+```
+
 ## Execução
 
 ```bash
