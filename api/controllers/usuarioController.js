@@ -44,6 +44,17 @@ class UsuarioController {
             res.status(400).send({ message: error.message})
         }
     }
+
+    static async deletar(req, res) {
+        const { id } = req.params;
+
+        try {
+            await usuarioService.deletar(id);
+            res.status(200).send({ message: 'Usuário deletado com sucesso' })
+        } catch (error) {
+            res.status(400).send({ message: error.message })
+        }
+    }
 }
 
 module.exports = UsuarioController

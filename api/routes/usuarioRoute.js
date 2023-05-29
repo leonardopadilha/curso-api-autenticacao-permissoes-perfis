@@ -8,6 +8,6 @@ router
     .get('/usuarios', UsuarioController.buscar)
     .get('/usuarios/id/:id', UsuarioController.buscarPorId)
     .put('/usuarios/id/:id', UsuarioController.editar)
-    .delete('/usuarios/id/:id')
+    .delete('/usuarios/id/:id', UsuarioController.deletar)
 
 module.exports = router
