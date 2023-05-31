@@ -11,6 +11,7 @@ API desenvolvida com base no [Curso da Alura - Node.js: Criando API Rest com aut
 [![Express](https://img.shields.io/badge/license-express-green.svg)](https://expressjs.com/)
 [![Bcrypt](https://img.shields.io/badge/license-bcrypt-blue.svg)](https://www.npmjs.com/package/bcryptjs)
 [![UUID](https://img.shields.io/badge/license-uuid-dark--green.svg)](https://www.npmjs.com/package/uuid)
+[![JsonWebToken](https://img.shields.io/badge/license-jsonwebtoken-dark--green.svg)](https://www.npmjs.com/package/jsonwebtoken)
 [![JS](https://img.shields.io/badge/license-javascript-blue.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 
