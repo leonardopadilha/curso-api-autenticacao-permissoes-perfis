@@ -13,6 +13,48 @@ class RoleController {
         }
     }
 
+    static async buscar(req, res) {
+        try {
+            const roles = await roleService.buscar()
+            res.status(200).send(roles)
+        } catch (error) {
+            res.status(404).send({ message: error.message })
+        }
+    }
+
+    static async buscarPorId(req, res) {
+        try {
+            const { id } = req.params
+
+            const role = await roleService.buscarPorId(id)
+            res.status(200).send(role)
+        } catch (error) {
+            res.status(404).send({ message: error.message })
+        }
+    }
+
+    static async editar(req, res) {
+        try {
+            const { id } = req.params
+            const { nome, descricao } = req.body
+
+            const role = await roleService.editar({ id, nome, descricao })
+            res.send(200).send(role)
+        } catch (error) {
+            res.status(400).send({ message: error.message })
+        }
+    }
+
+    static async deletar(req, res) {
+        try {
+            const { id } = req.params
+
+            const role = await roleService.deletar(id)
+            res.status(200).send({ message: 'Role deletada com sucesso'})
+        } catch (error) {
+            res.status(400).send({ message: error.message })
+        }
+    }
 }
 
 module.exports = RoleController
