@@ -2,7 +2,7 @@ const database = require('../models')
 const uuid = require('uuid')
 
 class PermissaoService {
-    static async cadastrar(dto) {
+    async cadastrar(dto) {
         const permissao = await database.permissoes.findOne({
             where: {
                 nome: dto.nome
@@ -14,7 +14,7 @@ class PermissaoService {
         }
 
         try {
-            const newPermissao = await database.permissao.create({
+            const newPermissao = await database.permissoes.create({
                 id: uuid.v4(),
                 nome: dto.nome,
                 descricao: dto.descricao

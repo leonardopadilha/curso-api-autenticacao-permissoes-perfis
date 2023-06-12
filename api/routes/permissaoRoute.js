@@ -1,8 +1,10 @@
 const { Router } = require('express');
 const router = Router();
 
+const PermissaoController = require('../controllers/permissaoController')
+
 router
-    .post('/permissao')
+    .post('/permissao', PermissaoController.cadastrar)
     .get('/permissao')
     .get('/permissao/:id')
     .delete('/permissao/:id')
