@@ -25,6 +25,53 @@ class PermissaoService {
             throw new Error('Erro ao cadastrar permissão')
         }
     }
+
+    async buscar() {
+        const permissoes = await database.permissoes.findAll();
+        return permissoes;
+    }
+
+    async buscarPorId(id) {
+        const permissao = await database.permissoes.findOne({
+            where: {
+                id: id
+            }
+        })
+
+        if (!permissao) {
+            throw new Error('Permissao informada não cadastrada')
+        }
+
+        return permissao;
+    }
+
+    async editar(dto) {
+        const permissao = await this.buscarPorId(dto.id)
+
+        try {
+            permissao.nome = dto.nome,
+            permissao.descricao = dto.descricao
+
+            await permissao.save()
+            return permissao
+        } catch (error) {
+            throw new Error('Erro ao editar permissao')
+        }
+    }
+
+    async deletar(id) {
+        const permissao = await this.buscarPorId(id)
+
+        try {
+            await database.permissoes.destroy({
+                where: {
+                    id: id
+                }
+            })
+        } catch (error) {
+            throw new Error('Erro ao tentar deletar permissão')
+        }
+    }
 }
 
 module.exports = PermissaoService
