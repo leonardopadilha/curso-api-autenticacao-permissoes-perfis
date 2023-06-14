@@ -10,9 +10,9 @@ module.exports = app => {
   app.use(
     bodyParser.json(),
     auth,
+    permissao,
     usuario,
     produto,
     role,
-    permissao,
   )
 }

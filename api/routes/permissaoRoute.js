@@ -5,9 +5,9 @@ const PermissaoController = require('../controllers/permissaoController')
 
 router
     .post('/permissao', PermissaoController.cadastrar)
-    .get('/permissao')
-    .get('/permissao/:id')
-    .delete('/permissao/:id')
-    .put('/permissao/:id')
+    .get('/permissao', PermissaoController.buscar)
+    .get('/permissao/:id', PermissaoController.buscarPorId)
+    .delete('/permissao/:id', PermissaoController.deletar)
+    .put('/permissao/:id', PermissaoController.editar)
 
 module.exports = router

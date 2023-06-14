@@ -47,7 +47,7 @@ class PermissaoService {
 
     async editar(dto) {
         const permissao = await this.buscarPorId(dto.id)
-
+        
         try {
             permissao.nome = dto.nome,
             permissao.descricao = dto.descricao
